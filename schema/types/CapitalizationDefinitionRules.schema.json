@@ -38,8 +38,7 @@
       "type": "boolean"
     }
   },
-  "additionalProperties": false,
-  "required": [
+    "required": [
     "include_outstanding_shares",
     "include_outstanding_options",
     "include_outstanding_unissued_options",

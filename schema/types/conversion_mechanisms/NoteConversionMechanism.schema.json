@@ -62,8 +62,7 @@
       "type": "boolean"
     }
   },
-  "additionalProperties": false,
-  "required": [
+    "required": [
     "type",
     "interest_rates",
     "day_count_convention",

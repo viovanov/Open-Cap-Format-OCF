@@ -90,8 +90,7 @@
     "consideration_text": {},
     "security_law_exemptions": {}
   },
-  "additionalProperties": false,
-  "required": [
+    "required": [
     "compensation_type",
     "quantity",
     "expiration_date",

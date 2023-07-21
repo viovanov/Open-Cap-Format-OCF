@@ -78,8 +78,7 @@
     "consideration_text": {},
     "security_law_exemptions": {}
   },
-  "additionalProperties": false,
-  "required": [
+    "required": [
     "convertible_type",
     "investment_amount",
     "conversion_triggers",

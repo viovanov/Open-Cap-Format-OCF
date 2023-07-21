@@ -34,8 +34,7 @@
       }
     }
   },
-  "additionalProperties": false,
-  "required": [
+    "required": [
     "include_stock_class_ids",
     "include_stock_plans_ids",
     "include_security_ids",

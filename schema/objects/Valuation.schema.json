@@ -44,8 +44,7 @@
     "id": {},
     "comments": {}
   },
-  "additionalProperties": false,
-  "required": [
+    "required": [
     "price_per_share",
     "effective_date",
     "valuation_type",
