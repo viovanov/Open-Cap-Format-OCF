@@ -76,7 +76,6 @@
     "id": {},
     "comments": {}
   },
-  "additionalProperties": false,
   "required": [
     "name",
     "class_type",
