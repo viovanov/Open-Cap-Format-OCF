@@ -1,19 +1,19 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/types/CapitalizationDefinition.schema.json",
+  "$id": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/types/CapitalizationDefinition.schema.json",
   "title": "Type - Capitalization Definition",
   "description": "Type represents a group of securities that constitutes some formally defined part of the company (e.g. post-money capitalization vs pre-money for a security)",
   "type": "object",
   "properties": {
     "include_stock_class_ids": {
-      "description": "All issuances of stock classes with these ids should be included (unless such an issuance is specifically included in `exclude_security_ids`",
+      "description": "All issuances of stock classes with these ids should be included (unless such an issuance is specifically included in exclude_security_ids",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "include_stock_plans_ids": {
-      "description": "All issuances of plan securities from stock plans with these ids should be included (unless such an issuance is specifically excluded in `exclude_security_ids`",
+      "description": "All issuances of plan securities from stock plans with these ids should be included (unless such an issuance is specifically excluded in exclude_security_ids",
       "type": "array",
       "items": {
         "type": "string"

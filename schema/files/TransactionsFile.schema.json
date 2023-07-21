@@ -1,126 +1,258 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/files/TransactionsFile.schema.json",
+  "$id": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/files/TransactionsFile.schema.json",
   "title": "File - Transactions",
   "description": "JSON containing file type identifier and list transactions",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/primitives/files/File.schema.json"
+      "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/primitives/files/File.schema.json"
     }
   ],
   "properties": {
-    "items": {
+    "items_convertible_acceptance": {
       "type": "array",
       "description": "List of OCF transaction objects",
       "items": {
-        "oneOf": [
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/acceptance/ConvertibleAcceptance.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/acceptance/EquityCompensationAcceptance.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/acceptance/StockAcceptance.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/acceptance/WarrantAcceptance.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/cancellation/ConvertibleCancellation.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/cancellation/EquityCompensationCancellation.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/cancellation/StockCancellation.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/cancellation/WarrantCancellation.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/conversion/ConvertibleConversion.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/conversion/StockConversion.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/exercise/EquityCompensationExercise.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/exercise/WarrantExercise.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/issuance/ConvertibleIssuance.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/issuance/EquityCompensationIssuance.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/issuance/StockIssuance.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/issuance/WarrantIssuance.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/reissuance/StockReissuance.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/repurchase/StockRepurchase.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/release/EquityCompensationRelease.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/retraction/ConvertibleRetraction.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/retraction/EquityCompensationRetraction.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/retraction/StockRetraction.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/retraction/WarrantRetraction.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/return_to_pool/StockPlanReturnToPool.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/split/StockClassSplit.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/adjustment/StockClassConversionRatioAdjustment.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/adjustment/StockClassAuthorizedSharesAdjustment.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/transfer/ConvertibleTransfer.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/transfer/EquityCompensationTransfer.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/transfer/StockTransfer.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/transfer/WarrantTransfer.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/vesting/VestingAcceleration.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/vesting/VestingStart.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/vesting/VestingEvent.schema.json"
-          },
-          {
-            "$ref": "https://raw.githubusercontent.com/Open-Cap-Table-Coalition/Open-Cap-Format-OCF/main/schema/objects/transactions/adjustment/StockPlanPoolAdjustment.schema.json"
-          }
-        ]
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/acceptance/ConvertibleAcceptance.schema.json"
+      }
+    },
+    "items_equity_compensation_acceptance": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/acceptance/EquityCompensationAcceptance.schema.json"
+      }
+    },
+    "items_stock_acceptance": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/acceptance/StockAcceptance.schema.json"
+      }
+    },
+    "items_warrant_acceptance": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/acceptance/WarrantAcceptance.schema.json"
+      }
+    },
+    "items_convertible_cancellation": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/cancellation/ConvertibleCancellation.schema.json"
+      }
+    },
+    "items_equity_compensation_cancellation": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/cancellation/EquityCompensationCancellation.schema.json"
+      }
+    },
+    "items_stock_cancellation": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/cancellation/StockCancellation.schema.json"
+      }
+    },
+    "items_warrant_cancellation": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/cancellation/WarrantCancellation.schema.json"
+      }
+    },
+    "items_convertible_conversion": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/conversion/ConvertibleConversion.schema.json"
+      }
+    },
+    "items_stock_conversion": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/conversion/StockConversion.schema.json"
+      }
+    },
+    "items_equity_compensation_exercise": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/exercise/EquityCompensationExercise.schema.json"
+      }
+    },
+    "items_warrant_exercise": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/exercise/WarrantExercise.schema.json"
+      }
+    },
+    "items_convertible_issuance": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/issuance/ConvertibleIssuance.schema.json"
+      }
+    },
+    "items_compensation_issuance": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/issuance/EquityCompensationIssuance.schema.json"
+      }
+    },
+    "items_stock_issuance": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/issuance/StockIssuance.schema.json"
+      }
+    },
+    "items_warrant_issuance": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/issuance/WarrantIssuance.schema.json"
+      }
+    },
+    "items_stock_reissuance": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/reissuance/StockReissuance.schema.json"
+      }
+    },
+    "items_stock_repurchase": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/repurchase/StockRepurchase.schema.json"
+      }
+    },
+    "items_equity_compensation_release": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/release/EquityCompensationRelease.schema.json"
+      }
+    },
+    "items_convertible_retraction": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/retraction/ConvertibleRetraction.schema.json"
+      }
+    },
+    "items_equity_compensation_retraction": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/retraction/EquityCompensationRetraction.schema.json"
+      }
+    },
+    "items_stock_retraction": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/retraction/StockRetraction.schema.json"
+      }
+    },
+    "items_warrant_retraction": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/retraction/WarrantRetraction.schema.json"
+      }
+    },
+    "items_stock_plan_return_to_pool": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/return_to_pool/StockPlanReturnToPool.schema.json"
+      }
+    },
+    "items_stock_class_split": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/split/StockClassSplit.schema.json"
+      }
+    },
+    "items_stock_class_conversion_ratio_adjustment": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/adjustment/StockClassConversionRatioAdjustment.schema.json"
+      }
+    },
+    "items_stock_class_authorized_shares_adjustment": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/adjustment/StockClassAuthorizedSharesAdjustment.schema.json"
+      }
+    },
+    "items_convertible_transfer": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/transfer/ConvertibleTransfer.schema.json"
+      }
+    },
+    "items_equity_compensation_transfer": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/transfer/EquityCompensationTransfer.schema.json"
+      }
+    },
+    "items_stock_transfer": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/transfer/StockTransfer.schema.json"
+      }
+    },
+    "items_warrant_transfer": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/transfer/WarrantTransfer.schema.json"
+      }
+    },
+    "items_vesting_acceleration": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/vesting/VestingAcceleration.schema.json"
+      }
+    },
+    "items_vesting_start": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/vesting/VestingStart.schema.json"
+      }
+    },
+    "items_vesting_event": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/vesting/VestingEvent.schema.json"
+      }
+    },
+    "items_stock_plan_pool_adjustment": {
+      "type": "array",
+      "description": "List of OCF transaction objects",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/viovanov/Open-Cap-Format-OCF/experiment/schema/objects/transactions/adjustment/StockPlanPoolAdjustment.schema.json"
       }
     },
     "file_type": {
